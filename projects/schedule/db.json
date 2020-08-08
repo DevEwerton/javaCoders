@@ -1,0 +1,19 @@
+{
+  "schedule": [
+    {
+      "id": 1,
+      "name": "Pessoa 1",
+      "cellphone": "(11) 9 1234-1234"
+    },
+    {
+      "id": 2,
+      "name": "Pessoa 2",
+      "cellphone": "(11) 9 1234-1234"
+    },
+    {
+      "id": 3,
+      "name": "Pessoa 3",
+      "cellphone": "(11) 9 1234-1234"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+.containerSchedule{
+    padding: 20px;
+    max-width: 650px;
+    border-radius: 20px;
+    border:2px solid #c8c8c8;
+    text-align: center;
+    margin-top: 20px;
+}
+.container{
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+input{
+    border:1px solid #c8c8c8;
+    border-radius: 20px;
+    padding: 4px 10px; 
+}
+.btnAction{
+    border:1px solid #007ad9;
+    background-color: #007ad9;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+.btnOperation{
+    border:1px solid #007ad9;
+    background-color: #007ad9;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin: 2px;
+    font-size: 10px;
+}
+.titleInput{
+    font-weight: 700;
+    color: #333333;
+    font-size: 16px;
+}
+th.headerTable {
+    text-align: center!important;
+}
+.imageSchedule{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border:2px solid #c8c8c8;
+}

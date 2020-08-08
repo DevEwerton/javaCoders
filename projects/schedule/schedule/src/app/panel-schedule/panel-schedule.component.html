@@ -1,0 +1,45 @@
+
+
+<div class="containerSchedule container">
+
+    <img class="imageSchedule" src="../../assets/images/favicon.png">
+    <h3>{{ title }}</h3>
+
+    <div class="p-grid container">
+        <div class="p-col-2 titleInput">Nome</div>
+        <div class="p-col-10">
+            <input pInputText type="text" class="input" [(ngModel)]="ag.name">
+        </div>
+        <div class="p-col-2 titleInput">Telefone</div>
+        <div class="p-col-10">
+            <input pInputText type="text" class="input" [(ngModel)]="ag.cellphone">
+        </div>
+        <div class="p-col-10 p-offset-2 mt-2">
+            <button pButton type="submit" class="btnAction" (click)="insertOrUpdate()">
+                {{ status }}
+            </button>
+        </div>
+    </div>
+    
+    <p-table [value]="scredules"  [paginator]="true" [rows]="2">
+          <ng-template pTemplate="header">  
+              <tr>
+                  <th class="headerTable">Nome</th>
+                  <th class="headerTable">Telefone</th>  
+                  <th class="deletar-atualizar"></th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-ag>
+              <tr>
+                  <td>{{ag.name}}</td>
+                  <td>{{ag.cellphone}}</td>
+                  <td class="deletar-atualizar">
+                    <p-button (click)="toEdit(ag)" class="btnOperation" icon="pi pi-pencil">EDITAR</p-button>
+                    <p-button (click)="toDelete(ag.id)" class="btnOperation" icon="pi pi-trash">EXCLUIR</p-button>
+                  </td>
+              </tr>
+          </ng-template>
+      </p-table>
+
+</div>    
+
