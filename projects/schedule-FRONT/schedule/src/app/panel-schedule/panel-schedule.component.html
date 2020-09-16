@@ -8,11 +8,11 @@
     <div class="p-grid container">
         <div class="p-col-2 titleInput">Nome</div>
         <div class="p-col-10">
-            <input pInputText type="text" class="input" [(ngModel)]="ag.name">
+            <input pInputText type="text" class="input" [(ngModel)]="ag.nome">
         </div>
         <div class="p-col-2 titleInput">Telefone</div>
         <div class="p-col-10">
-            <input pInputText type="text" class="input" [(ngModel)]="ag.cellphone">
+            <input pInputText type="text" class="input" [(ngModel)]="ag.telefone">
         </div>
         <div class="p-col-10 p-offset-2 mt-2">
             <button pButton type="submit" class="btnAction" (click)="insertOrUpdate()">
@@ -31,8 +31,8 @@
           </ng-template>
           <ng-template pTemplate="body" let-ag>
               <tr>
-                  <td>{{ag.name}}</td>
-                  <td>{{ag.cellphone}}</td>
+                  <td>{{ag.nome}}</td>
+                  <td>{{ag.telefone}}</td>
                   <td class="deletar-atualizar">
                     <p-button (click)="toEdit(ag)" class="btnOperation" icon="pi pi-pencil">EDITAR</p-button>
                     <p-button (click)="toDelete(ag.id)" class="btnOperation" icon="pi pi-trash">EXCLUIR</p-button>

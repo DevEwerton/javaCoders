@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http'
 })
 
 export class ScheduleServiceService implements OnInit{
-  apiUrl = "http://localhost:3000/schedule"
+  apiUrl = "http://localhost:8080/agenda"
   
   constructor(private httpClient: HttpClient) { }
   ngOnInit() {
-  }
+  } 
   toList(){
-      return  this.httpClient.get(this.apiUrl);
+    return this.httpClient.get(this.apiUrl);
   }
   toAdd(agenda: any) {
     return this.httpClient.post(this.apiUrl, agenda);

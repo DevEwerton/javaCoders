@@ -16,7 +16,7 @@ export class PanelScheduleComponent implements OnInit {
   scredules = []
   operation = true
   status = "INSERIR"
-  ag = {id: '', name: '', cellphone: ''};
+  ag = {id: '', nome: '', telefone: ''};
     
   constructor(private scheduleService: ScheduleServiceService) { }
 
@@ -38,19 +38,21 @@ export class PanelScheduleComponent implements OnInit {
     }
   }
   toEdit(ag: any) {
-    this.ag = {id: ag.id, name: ag.name, cellphone: ag.cellphone};
+    this.ag = {id: ag.id, nome: ag.nome, telefone: ag.telefone};
     this.operation = false;
     this.status = "ALTERAR";
   }
   toUpdate() {
     this.scheduleService.toUpdate(this.ag).subscribe(() => {
-    this.ag = {id: '', name: '', cellphone: ''};
+    this.ag = {id: '', nome: '', telefone: ''};
     this.getAllSchedules();
     });
   }
   toAdd() {
+    console.log('inserir')
+    console.log(this.ag)
     this.scheduleService.toAdd(this.ag).subscribe(() => {
-      this.ag = {id: '', name: '', cellphone: ''};
+      this.ag = {id: '',  nome: '', telefone: ''};
       this.getAllSchedules();
     });
   }
