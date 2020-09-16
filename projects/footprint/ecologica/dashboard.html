@@ -1,0 +1,315 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pegada Ecológica | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/stylesDashboard.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawStacked);
+
+        function drawStacked() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('timeofday', 'Time of Day');
+            data.addColumn('number', 'Motivation Level');
+            data.addColumn('number', 'Energy Level');
+
+            data.addRows([
+                [{v: [8, 0, 0], f: 'JAN'}, 1, .25],
+                [{v: [9, 0, 0], f: 'FEV'}, 2, .5],
+                [{v: [10, 0, 0], f:'MAR'}, 3, 1],
+                [{v: [11, 0, 0], f: 'JUN'}, 4, 2.25],
+                [{v: [12, 0, 0], f: 'AGO'}, 5, 2.25],
+                [{v: [13, 0, 0], f: 'SET'}, 6, 3],
+                [{v: [14, 0, 0], f: 'OUT'}, 7, 4],
+                [{v: [15, 0, 0], f: 'NOV'}, 8, 5.25],
+                [{v: [16, 0, 0], f: 'DEZ'}, 9, 7.5],
+                [{v: [17, 0, 0], f: 'JAN'}, 10, 10],
+            ]);
+
+            var options = {
+                title: 'Históricos Das Pegadas Ecológicas',
+                isStacked: true,
+                hAxis: {
+                title: 'Dias Avaliados',
+                format: 'h:mm a',
+                viewWindow: {
+                    min: [7, 30, 0],
+                    max: [17, 30, 0]
+                }
+                },
+                vAxis: {
+                title: 'As 5 Categorias'
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+  
+</head>
+<body>
+
+<!-- Start Container-Fluid Pegada -->
+<div class="container-fluid navbarPegada">
+<div class="container navbarPegada">
+    <div class="row rowPegada">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom primary-color">
+        <a class="navbar-brand" href="index.html">
+        <img src="assets/images/navbar-icon.png" class="d-inline-block align-middle avatar"
+            alt="pegada ecologica logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+</div>
+</div>
+<!-- Ends Container-Fluid Pegada -->
+
+<!-- Start Container-Fluid Dashboard -->
+<div class="container-fluid dashboard">
+    <div class="container dashboard">
+        <div class="row dashboard">
+            
+            <div class="col-12 col-lg-3 colDashboard historic">
+                <a href="#" class="btnDashboard">Histórico</a>
+            </div>
+   
+            <div class="col-12 col-lg-3 colDashboard update">
+                <a href="#" class="btnDashboard">Atualização</a>
+            </div>
+
+            <div class="col-12 col-lg-3 colDashboard tips">
+                <a href="#" class="btnDashboard">Dicas</a>
+            </div>
+
+            <div class="col-12 col-lg-3 colDashboard configurations">
+                <a href="#" class="btnDashboard">Configurações</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Ends Container-Fluid Dashboard -->
+
+<!-- Start Container-Fluid ChartsPegada -->
+<div class="container-fluid chartsPegada">
+    <div class="container chartsPegada">
+        <!-- Start Insert Content to Historic -->
+        <div class="row chartsPegada historic">
+            <div class="col-12">
+                <h3>Histórico</h3>
+                <div id="chart_div"></div>
+            </div>
+        </div>
+        <!-- Ends Insert Content to Historic -->
+
+        <!-- Start Insert Content to Update -->
+        <div class="row chartsPegada update">
+            <div class="col-12">
+                <h3>Atualização</h3>
+                <p>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                </p>
+
+                <form method="post" action="">
+                    
+                    <div class="questionToAnalyze">
+                        <h5>1 | Blablabla da pergunta </h5>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question1" checked>
+                                blablablabla da alternativa 1
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question1" checked>
+                                blablablabla da alternativa 2
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question1" checked>
+                                blablablabla da alternativa 3
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question1" checked>
+                                blablablabla da alternativa 4
+                            </label>
+                        </div>     
+                    </div>
+
+                    <div class="questionToAnalyze">
+                        <h5>2 | Blablabla da pergunta </h5>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question2" checked>
+                                blablablabla da alternativa 1
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question2" checked>
+                                blablablabla da alternativa 2
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question2" checked>
+                                blablablabla da alternativa 3
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question2" checked>
+                                blablablabla da alternativa 4
+                            </label>
+                        </div>     
+                    </div>
+
+                    <div class="questionToAnalyze">
+                        <h5>3 | Blablabla da pergunta </h5>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question3" checked>
+                                blablablabla da alternativa 1
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question3" checked>
+                                blablablabla da alternativa 2
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question3" checked>
+                                blablablabla da alternativa 3
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="question3" checked>
+                                blablablabla da alternativa 4
+                            </label>
+                        </div>     
+                    </div>
+
+                    <button type="submit" class="btn btn-primary toAnalyze">ANALISE</button>
+                  </form>
+            </div>
+        </div>
+        <!-- Ends Insert Content to Update -->
+
+        <!-- Start Insert Content to Tips -->
+        <div class="row chartsPegada tips">
+            <div class="col-12">
+                <h3>Dicas</h3>
+                <p>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+                </p>
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle btnChooseCategory" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dicas por Categoria
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item cat1" href="#">Categoria 1</a>
+                      <a class="dropdown-item cat2" href="#">Categoria 2</a>
+                      <a class="dropdown-item cat3" href="#">Categoria 3</a>
+                      <a class="dropdown-item cat4" href="#">Categoria 4</a>
+                      <a class="dropdown-item cat5" href="#">Categoria 5</a>
+                    </div>
+                </div>
+                <div class="contentCategory">
+                    <div class="row cat1">
+                        <span>Conteúdo da Categoria 1</span>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </div>
+                    <div class="row cat2">
+                        <span>Conteúdo da Categoria 2</span>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </div>
+                    <div class="row cat3">
+                        <span>Conteúdo da Categoria 3</span>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </div>
+                    <div class="row cat4">
+                        <span>Conteúdo da Categoria 4</span>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </div>
+                    <div class="row cat5">
+                        <span>Conteúdo da Categoria 5</span>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Ends Insert Content to Tips -->
+
+        <!-- Start Insert Content to Configurations -->
+        <div class="row chartsPegada configurations">
+            <div class="col-12">
+                <h3>Configurações Gerais</h3>
+            </div>
+        </div>
+        <!-- Ends Insert Content to Configurations -->
+
+    </div>
+</div>
+<!-- Start Container-Fluid ChartsPegada -->
+
+
+<!-- Start Container-Fluid Footer -->
+<div class="container-fluid footer">
+<div class="container footer">
+    <div class="row footer">
+    <div class="col-xs-12 col-sm-4 col-md-4 colFooter">
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 text-center text-white colFooter">
+        <h6>© Todos os direitos reservados.</h6>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 colFooter">
+    </div>
+    </div>
+</div>
+</div>
+<!-- Ends Container-Fluid Footer -->
+
+<footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</footer>
+
+</body>
+</html>
