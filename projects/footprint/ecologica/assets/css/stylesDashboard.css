@@ -12,6 +12,10 @@
     min-height: 100vh;
     position: relative;
   }
+
+  a{
+    text-decoration: none!important;
+  }
   
   
   /* Start Style Container-Fluid NavbarPegada */
@@ -110,6 +114,20 @@
     color: #fff;
   }
 
+  .container.dashboard .row.dashboard .menuDashboard{
+    display: inline-flex;
+    margin: 0;
+  }
+
+  .container.dashboard .row.dashboard{
+    justify-content: center;
+  }
+
+  .container.dashboard .row.dashboard .menuDashboard li{
+    text-decoration: none;
+    list-style-type: none;
+    min-width: 200px;
+  }
   /* Ends Style Container-Fluid Dashboard */
   /* Ends Style Container-Fluid Dashboard */
   /* Ends Style Container-Fluid Dashboard */
@@ -197,6 +215,60 @@
     align-items: center;
     color: #000;
   }
+
+  .container-fluid.chartsPegada .container.chartsPegada .contentCategory .row span{
+    background-color: #5FB739;
+    padding: 6px 10px;
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  .container-fluid.chartsPegada  .row.chartsPegada.adm h3{
+    width: 100%;
+  }
+
+  .container-fluid.chartsPegada  .row.chartsPegada.adm .squareInsertQuestion.adm,
+  .container-fluid.chartsPegada  .row.chartsPegada.adm .squareAllQuestions.adm{
+    padding: 6px;
+    border: 1px solid #5FB739;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .container-fluid.chartsPegada  .row.chartsPegada.adm form.formInsertQuestion.adm{
+    text-align: left;
+    padding: 25px;
+  }
+
+  .container-fluid.chartsPegada  .row.chartsPegada.adm form.formInsertQuestion.adm label{
+    margin-top: 16px;
+  }
+
+  .container-fluid.chartsPegada  .row.chartsPegada.adm form.formInsertQuestion.adm .toInsertQuestion{
+    border-radius: 50px;
+    border: 2px solid #5FB739;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 10px 4px;
+    width: 100%;
+    font-weight: 400;
+    background-color: transparent;
+    color: #fff;
+    margin: 20px 0px;
+    color: #000;
+  }
+  
+  .container-fluid.chartsPegada  .row.chartsPegada.adm form.formInsertQuestion.adm .toInsertQuestion:hover{
+    background-color: #5FB739;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 4px 4px 6px #000;
+  }
+
+  .container-fluid.chartsPegada  .row.chartsPegada.adm form.formInsertQuestion.adm h5{
+    text-align: center;
+  }
+
   /* Ends Style Container-Fluid ChartsPegada */
   /* Ends Style Container-Fluid ChartsPegada */
   /* Ends Style Container-Fluid ChartsPegada */
@@ -248,6 +320,16 @@
   /* Ends  Style Container-Fluid Footer */
   
   
+    @media(max-width:768px){
+      .container.dashboard .row.dashboard .menuDashboard{
+        display: inline-block;
+      }
+
+      .container-fluid.chartsPegada  .row.chartsPegada.adm .squareAllQuestions.adm table{
+        font-size: 12px;
+      }
+    }
+  
   @media(max-width:1366px){
     
     .container-fluid.login {
@@ -256,7 +338,7 @@
 
     .container-fluid.chartsPegada {
       min-height: 1500px;
-  }
+    }
   
   }
   

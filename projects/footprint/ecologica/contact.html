@@ -1,10 +1,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Pegada Ecológica | Login</title>
+    <title>Pegada Ecológica | Contato</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/stylesContact.css">
 </head>
 <body>
 
@@ -24,17 +24,22 @@
     
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="register.html">Cadastro</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="contact.html">Contato</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">Sobre</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Entrar</a>
               </li>
             </ul>
           </div>
@@ -44,36 +49,35 @@
   </div>
   <!-- Ends Container-Fluid Pegada -->
     
-  <!-- Start Container-Fluid Login -->
-  <div class="container-fluid login">
-    <div class="container login">
-      <div class="row login">
-        <!-- <h5 class="">Login</h5> -->
-        <br>
-        <form class="form login" action="dashboard.html">
+  <!-- Start Container-Fluid Contact -->
+  <div class="container-fluid contactPegada">
+    <div class="container contactPegada">
+
+      <div class="row contactPegada">
+        <form class="form contactPegada">
           <div class="form-label-group">
-            <label for="inputEmail">Usuário</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required autofocus>
+              <label for="inputName">Nome</label>
+              <input type="name" id="inputName" class="form-control" placeholder="Nome" required autofocus>
           </div>
 
           <div class="form-label-group">
-            <label for="inputPassword">Senha</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+              <label for="inputEmail">E-mail</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
+          </div>
+          
+          <div class="form-label-group">
+              <label for="inputMessage">Mensagem</label>
+              <textarea class="form-control" rows="4" id="inputMessage" placeholder="Mensagem"required autofocus></textarea>
           </div>
 
-          <div class="custom-control custom-checkbox mb-3">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label passwordRecovery" for="customCheck1">lembrar senha</label>
-          </div>
-          <button class="btnPegada" type="submit">Entrar</button>
-          <a href="register.html" class="passwordRecovery" >criar conta</a>
-          <br>
-          <a href="recovery.html" class="passwordRecovery">recuperar senha</a>
+          <div>
+              <button type="submit" class="btnPegada">Enviar</button>
+          </div>    
         </form>
       </div>
     </div>
   </div>
-  <!-- Ends Container-Fluid Login -->
+  <!-- Ends Container-Fluid Contact -->
 
   <!-- Start Container-Fluid Footer -->
     <div class="container-fluid footer">

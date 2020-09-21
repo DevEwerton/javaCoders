@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var classContents = ["historic", "update", "tips", "configurations"]
+    var classContents = ["historic", "update", "tips", "configurations", "adm"]
     
     var classTips = ["cat1", "cat2", "cat3", "cat4", "cat5"]
 
@@ -22,6 +22,11 @@ $(document).ready(function(){
     $('.configurations').click(function(element){
         hiddenContent()
         showContent('configurations')
+    })
+
+    $('.adm').click(function(element){
+        hiddenContent()
+        showContent('adm')
     })
 
     $('.dropdown-item.cat1').click(function(element){
@@ -79,7 +84,24 @@ $(document).ready(function(){
 
     }
     
+    $('.btnDeleteQuestion').on('click', function(e){
+        let descriptionquestion = $(this).data('descriptionquestion')
+        let idquestion = $(this).data('idquestion')
+        $('#idQuestionDelete').val(idquestion)
+        $('#descriptionDelete').html(descriptionquestion)
+        $('#modalConfirmDeleteQuestion').modal('show')
+    })
 
+    $('.efectDeleteQuestion').on('click', function(){
+        let idQuestionDelete = $('#idQuestionDelete').val()
+        console.log('(AJAX) Você só precisa excluir esse ID da Pergunta: ',idQuestionDelete)
+    })
+
+    $('.btnUpdateQuestion').on('click', function(e){
+        let idquestionupdate = $(this).data('idquestionupdate')
+        let descriptionQuestion = $(this).data('descriptionquestionupdate')
+        $('#question').val(descriptionQuestion)
+    })
 
     hiddenContentCategories()
     hiddenContent()
